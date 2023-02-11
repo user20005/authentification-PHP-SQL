@@ -7,7 +7,7 @@ $verifier = $bdd->prepare('SELECT * FROM user WHERE email = ? and password = ?')
 $verifier->execute(array($email, $password));
 $data = $verifier->fetchAll();
 if (count($data) > 0) {
-    $_SESSION["ps"] = $data[0]['pseudo'];
+    $_SESSION["user"] = $data[0]['pseudo'];
     $_SESSION["autoriser"] = "oui";
     header("location:./landing.php");
 } else {
@@ -15,3 +15,4 @@ if (count($data) > 0) {
     die();
 }
 ?>
+

@@ -5,7 +5,7 @@ if ($_SESSION["autoriser"] != "oui") {
   header("location:index.html");
   exit();
 }
-$bonjour = "Bienvenue  " .$_SESSION["ps"];
+$bonjour = "Bienvenue  " .$_SESSION["user"];
 
 ?>
 <!DOCTYPE html>

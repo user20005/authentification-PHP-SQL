@@ -1,4 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
 
 * {
   margin: 0;
@@ -132,6 +133,7 @@
   box-sizing: border-box;
   text-align: left;
   color: rgb(37, 142, 228);
+  position: relative;
 }
 
 .inpt-icon i {
@@ -163,6 +165,9 @@ button {
   outline: none;
   color: #fff;
   cursor: pointer;
+}
+#btn.move{
+  transform:  translateX(-100%);
 }
 
 button:hover {
@@ -196,18 +201,17 @@ button i.lft {
     overflow: hidden;
   }
 }
-
-@keyframes input {
-  25% {
-    transform: translateX(-5px);
-  }
-  50% {
-    transform: translateX(5px);
-  }
-  75% {
-    transform: translateX(-5px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
+.msgerr{
+  position: relative;
+  color: rgb(6, 255, 102);
+  font-size: 15px;
+  font-family: 'Iceland', cursive;
+  top: 10px;
+  left: -15px;
+}
+.msgerr.err1{
+  color: red;
+}
+.msgerr.err2{
+  color: orange;
 }
