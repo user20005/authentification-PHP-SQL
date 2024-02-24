@@ -17,7 +17,7 @@ user.addEventListener("click", function () {
     { once: true }
 )
 
-password.addEventListener("keyup", function() {
+password.addEventListener("keyup", function () {
     if (password.value.length >= 1 && password.value.length < 8) {
         valid = false;
     } else {
@@ -31,11 +31,11 @@ password.addEventListener("keyup", function() {
     } else if (password.value.length >= 4 && password.value.length < 8) {
         small.classList.add("err2");
         small.classList.remove("err1");
-        small.innerHTML =  "<i class='fa-solid fa-exclamation'></i> "+ "Mot de passe moyen";
-    }   else if (password.value.length >= 8) {
+        small.innerHTML = "<i class='fa-solid fa-exclamation'></i> " + "Mot de passe moyen";
+    } else if (password.value.length >= 8) {
         small.classList.remove("err2");
         small.classList.remove("err1");
-        small.innerHTML =  "<i class='fa-solid fa-user-check'></i>" + "Mot de passe fort";
+        small.innerHTML = "<i class='fa-solid fa-user-check'></i>" + "Mot de passe fort";
     }
 
 });
@@ -49,3 +49,12 @@ function move() {
         btn.classList.remove("move");
     }
 }
+
+
+
+
+window.addEventListener("load", function () {
+    alert("L'authentification ne peut pas être effectuée pour le moment en raison de problèmes de serveur.\nVous pouvez consulter l'image de la page après la connexion sur mon github sous le nom auth.png")
+    
+
+}, { once: true });
