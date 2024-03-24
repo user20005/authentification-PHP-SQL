@@ -11,11 +11,7 @@ let user = document.querySelector(".user");
 let password = document.querySelector(".password");
 let valid = true;
 let small = document.querySelector(".msgerr");
-user.addEventListener("click", function () {
-    alert("bonjour , bienvenue sur mon site web,avant de vous inscrire si vous voulez bien dans le champ mot de passe essayez de metre un mot de passe moins de 7 caractères et essayez de vous connecter ,voila :) ");
-},
-    { once: true }
-)
+
 
 password.addEventListener("keyup", function () {
     if (password.value.length >= 1 && password.value.length < 8) {
